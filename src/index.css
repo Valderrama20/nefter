@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #0e0e0f;
+  text-decoration: inherit;
+}
+
+body {
+  background-color: #0e0e0f;
+  font-family: 'Nunito', sans-serif;
+}
+img {
+  filter: saturate(1.5);
+}
+
+.flexCenter {
+  @apply flex items-center justify-center;
+}
+.navMobile {
+  @apply absolute left-0 z-50 -bottom-[21rem] flex-col w-full bg-white dark:bg-mobileNav dark:lg:bg-transparent;
+}
+.listMobile {
+  @apply border-t border-borderNavMobile px-3 flex items-center h-14 lg:px-0;
+}
+.inputCreate {
+  @apply bg-whiteInputs text-black border-borderInput border w-full p-4 rounded-md text-sm placeholder:text-black placeholder:capitalize placeholder:leading-5 text-lg font-bold dark:text-white dark:bg-bgSelect dark:placeholder:text-white;
+}
+.selectFilter {
+  @apply bg-whiteLight bg-selectBG text-topBar font-bold w-full py-2 pl-2 pr-0 rounded-full text-xs sm:py-4 lg:px-10 lg:text-base dark:bg-bgSelect dark:text-white;
+}
+.containerImageRounded img {
+  border-radius: 50%;
+}
+
+.bgDarkLanding {
+  background-image: url('./assets//bg-slider.png');
+}
+.bgBannerLayaout {
+  background-image: url('./assets/bg-page-title.jpg');
+}
+.bgFormCreate {
+  background-image: url('./assets/img-create-item.jpg');
+}
+.bgImageLogin {
+  background-image: url('./assets/img-login.jpg');
+}
+.bgFooter {
+  background-image: url('./assets/bgFooter.png');
+}
+.bg404 {
+  background-image: url('./assets/Image404.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Barra de scrooll */
+
+.scrollbar::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.scrollbar::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-button:increment,
+.scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
+
+.scrollbar::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #1c1c1c30;
+  border-radius: 20px;
+  border: 1px solid #f1f2f34e;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
